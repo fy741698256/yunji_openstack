@@ -1,0 +1,14 @@
+version: 0.1
+templates:
+- name: yunji_openstack
+  terraform:
+    workdir: ./
+    var:
+      user_name: ''
+      password: ''
+      auth_url: ''
+      tenant_id: ''
+      image_id: ''
+    save_state: true
+  description: 部署openstack机器实例
+  timeout: 300
