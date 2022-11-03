@@ -13,6 +13,11 @@ resource "openstack_compute_instance_v2" "basic" {
   image_id        = var.image_id
   flavor_id       = "3"
   security_groups = ["default"]
+  
+  network {
+    uuid = "6a1c7df7-ed18-4ff1-9f05-621d3143e5aa"
+    name = "private"
+  }
 
   metadata = {
     this = "that"
